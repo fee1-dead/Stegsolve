@@ -1,0 +1,101 @@
+Delivered-To: ent3rm4n@gmail.com
+Received: by 2002:adf:ea85:0:b0:38a:8d30:b1ec with SMTP id s5csp457097wrm;
+        Tue, 11 Feb 2025 14:04:10 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEaKUZM36ljlflllgbf0sCrL96vBRR6ch0/j7TQH5cHPqSKQBIZsA1atNMCsk7IgmD3Gul/
+X-Received: by 2002:a05:6402:1ecb:b0:5d3:ce7f:abee with SMTP id 4fb4d7f45d1cf-5deadde0280mr654780a12.25.1739311450699;
+        Tue, 11 Feb 2025 14:04:10 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1739311450; cv=none;
+        d=google.com; s=arc-20240605;
+        b=D+jgZ1C5r1JlM2hmy+e1mkPb4GW+V3sfeK+FJYsoSnNmbjvOq4szWvcUj3QxjvkxnN
+         1M1awu3ZN9vGR5EOpkrpBIXNrJ69GWen/ubtPbmhuZF/INXRzAx1gLVdOU+g0uQ5szZC
+         zNmdHb46vFpwpm1KPrq4wCSXA9xSttSj2n4u8GyIa/ShQRGdCh4/YLrfJKYA0INaNaDP
+         ogIcvbNZxNZkzyfhfiMDKovxeREdP1toSn4SpxRXQFcYbYmg1bnC+x9mtqmCOQJiW2Wb
+         A11SEMv1K+JNKWX3gIBiAhlG9JGTzWJEru5dKTX1TAB5wVj/C9YiMeSZv+w542z2KktQ
+         SGIw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:to:from:importance:subject:date:savedfromemail
+         :message-id:dkim-signature;
+        bh=cwWhEom8tbGyCrIcUbTLu0MFYIWXN0fCZL+uMbX1WI4=;
+        fh=9LvLIMqkICwT9750/qOekFGpoGWIuhVZadEzeek0m6g=;
+        b=fVSl+s5gAHMXXTeEtikFGW4u2Iw6U3A74eFHUWTNhD0uArox3qncK2DQZVwKq/eXFE
+         3/o1Gqjw9kqtrx3tJru6+55y7KWCkriXchG2DjCDYBoZ64u7tXPVUG6TpiZPV1bEV71M
+         f/y4LCGVXZhyr4a2l4Kjk6VSw/dnW1XPq12ykL+11pYHGefZSW2ibohLCnxYU25dY3qY
+         VT2w7n8zzLr1XF6/Nil23hTO0Dg5RAl48p7dcjHgfdDl2H0RfyW6xHMi6UVJJonDqtq9
+         IxLIPUatN1mWyffxqJFCykWM+cwEsdZye7A5eax2OhaGT8e1++pqg9DzaLvbKOcXD3uN
+         0LjA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ntlworld.com header.s=meg.feb2017 header.b=gior6YWo;
+       spf=pass (google.com: domain of cronos@ntlworld.com designates 84.116.50.37 as permitted sender) smtp.mailfrom=cronos@ntlworld.com;
+       dmarc=pass (p=QUARANTINE sp=REJECT dis=NONE) header.from=ntlworld.com
+Return-Path: <cronos@ntlworld.com>
+Received: from csmtpq2-prd-nl1-vmo.edge.unified.services (csmtpq2-prd-nl1-vmo.edge.unified.services. [84.116.50.37])
+        by mx.google.com with ESMTPS id 4fb4d7f45d1cf-5dea95d548esi841486a12.557.2025.02.11.14.04.10
+        for <ent3rm4n@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 11 Feb 2025 14:04:10 -0800 (PST)
+Received-SPF: pass (google.com: domain of cronos@ntlworld.com designates 84.116.50.37 as permitted sender) client-ip=84.116.50.37;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ntlworld.com header.s=meg.feb2017 header.b=gior6YWo;
+       spf=pass (google.com: domain of cronos@ntlworld.com designates 84.116.50.37 as permitted sender) smtp.mailfrom=cronos@ntlworld.com;
+       dmarc=pass (p=QUARANTINE sp=REJECT dis=NONE) header.from=ntlworld.com
+Received: from csmtp3-prd-nl1-vmo.nl1.unified.services ([100.107.82.133] helo=csmtp3-prd-nl1-vmo.edge.unified.services)
+	by csmtpq2-prd-nl1-vmo.edge.unified.services with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.95)
+	(envelope-from <cronos@ntlworld.com>)
+	id 1thyMS-00FPUN-Cf
+	for ent3rm4n@gmail.com;
+	Tue, 11 Feb 2025 23:04:10 +0100
+Received: from [192.168.0.116] ([86.7.111.82])
+	by csmtp3-prd-nl1-vmo.edge.unified.services with ESMTPA
+	id hyMStKUvk0VhrhyMTtHiaP; Tue, 11 Feb 2025 23:04:09 +0100
+X-SourceIP: 86.7.111.82
+X-Authenticated-Sender: cronos@ntlworld.com
+X-Spam: 0
+X-Authority: v=2.4 cv=a6zK9VSF c=1 sm=1 tr=0 ts=67abc959 cx=a_exe
+ a=QHzbM8Hd4rNv1SzwXyb+rg==:117 a=QHzbM8Hd4rNv1SzwXyb+rg==:17
+ a=1oJP67jkp3AA:10 a=T2h4t0Lz3GQA:10 a=TKNh017BN2QjS5H9wdwA:9
+ a=QEXdDO2ut3YA:10 a=JSaiTvTTAIBP_7tT:21 a=_W_S_7VecoQA:10
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ntlworld.com;
+	s=meg.feb2017; t=1739311449;
+	bh=cwWhEom8tbGyCrIcUbTLu0MFYIWXN0fCZL+uMbX1WI4=;
+	h=Date:Subject:From:To;
+	b=gior6YWoadeFis+Y/0fYern85vkI3Pob77ZqbEHmAG1376CMO28JU/dkR1FD/A9Pu
+	 DcGZlGg/Tv4mmRE6pkAujegBJepjXfBOQSygHzr43B5UcDMquJQKUKz8b4zPmb6agd
+	 ayL9sbzWFyjjKcfi1aQK7l5ynKACsKCLw0F0GJvO6B6pdm0WI8tj1EyF1NZ/wUR+9c
+	 PcmvoFO9uHvNRb+N7vK3K30DGP16UtTFHxLIND+AUC7X+UAwfs02thoau8LEqv58ks
+	 VxKnlJFHY5UmrG+e8hObhUKgK/jb1T3zK+AdKPdPUlGryiVLSaCDLZjB8Y6n2Zke0+
+	 MUSwD6Ojznd0Q==
+Message-Id: <20250211230409.hyMStKUvk0VhrhyMTtHiaP@csmtp3-prd-nl1-vmo.edge.unified.services>
+SavedFromEmail: cronos@ntlworld.com
+Date: Tue, 11 Feb 2025 22:04:08 +0000
+Subject: Re: StegSolve
+Importance: normal
+From: cronos <cronos@ntlworld.com>
+To: fee1-dead <ent3rm4n@gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="--_com.samsung.android.email_7951749029383280"
+X-CMAE-Envelope: MS4xfE7sq0b6umEmlBZjTR4l3SDBFS1nld5FZu+TQ4IEBLjfXcPz++SgauzRJlzJF35SfsQSRuXIZYqs+dfFDomB9aU/3GcQEIUWu20b7iy+aEhfr9Sjf9ir
+ FQBANBmsu5/4fNmWxI8BAbi2LP0byUvDTfeDFkoP3lXBBq0XAfHo33wCVrG5izpkBnpbjGj8bx6vnQ==
+
+----_com.samsung.android.email_7951749029383280
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+SSdtIG9rIHJlbGljZW5zaW5nIGl0LiBNSVQgaXMgZmluZVNlbnQgZnJvbSBteSBHYWxheHkK
+
+----_com.samsung.android.email_7951749029383280
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGhlYWQ+PG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0
+L2h0bWw7IGNoYXJzZXQ9VVRGLTgiPjwvaGVhZD48Ym9keSBkaXI9ImF1dG8iPjxkaXYgZGlyPSJh
+dXRvIj5JJ20gb2sgcmVsaWNlbnNpbmcgaXQuIE1JVCBpcyBmaW5lPC9kaXY+PGRpdiBkaXI9ImF1
+dG8iPjxicj48L2Rpdj48ZGl2IGRpcj0iYXV0byI+PGJyPjwvZGl2PjxkaXYgZGlyPSJhdXRvIj48
+YnI+PC9kaXY+PGRpdiBkaXI9ImF1dG8iIGlkPSJjb21wb3Nlcl9zaWduYXR1cmUiPjxkaXYgZGly
+PSJhdXRvIiBzdHlsZT0iZm9udC1zaXplOjEycHg7Y29sb3I6IzU3NTc1NyI+U2VudCBmcm9tIG15
+IEdhbGF4eTwvZGl2PjwvZGl2PjxkaXYgZGlyPSJhdXRvIj48YnI+PC9kaXY+PGRpdj48YnI+PC9k
+aXY+PC9ib2R5PjwvaHRtbD4=
+
+----_com.samsung.android.email_7951749029383280--
+
